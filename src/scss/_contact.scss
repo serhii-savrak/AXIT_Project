@@ -1,0 +1,110 @@
+.contact-section {
+  min-width: $min-media-mobile;
+}
+
+.contact__title {
+  font-family: $font-raleway;
+  font-size: 36px;
+  text-align: center;
+  color: #212121;
+
+  &::after {
+    content: "";
+    display: block;
+    margin: 22px auto 0;
+    width: 65px;
+    height: 2px;
+    background-color: $logo-accent-color;
+  }
+}
+
+.contact__subtitle {
+  font-family: $font-sans;
+  font-size: 14px;
+  color: $grey-color;
+
+  @media (min-width: $media-tablet) {
+    text-align: center;
+  }
+}
+
+.contact__form-input {
+  width: 100%;
+  box-shadow: 0px 1px #d6d6d6;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid #d6d6d6;
+  border-left: 1px solid #d6d6d6;
+  margin-top: 40px;
+  padding: 5px 0 5px 10px;
+
+  &::placeholder {
+    font-family: $font-sans;
+    font-size: 14px;
+    color: #bdbdbd;
+  }
+}
+
+.contact__form-submit-btn {
+  font-family: $font-sans;
+  display: block;
+  padding: 15px 25px;
+  border-radius: 5px;
+  margin: 40px auto 63px;
+  color: $white;
+  font-weight: bolder;
+
+  @media (min-width: $media-tablet) {
+    margin: 88px auto 160px;
+  }
+}
+
+.contact__form-grid-wrapper {
+  @media (min-width: $media-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+
+    grid-template-areas:
+      "name-input message-input"
+      "email-input message-input"
+      "subject-input message-input";
+  }
+}
+
+.contact__form-name {
+  grid-area: name-input;
+
+  @media (min-width: $media-tablet) {
+    border-left: none;
+    box-shadow: none;
+  }
+}
+
+.contact__form-email {
+  grid-area: email-input;
+
+  @media (min-width: $media-tablet) {
+    border-left: none;
+    box-shadow: none;
+  }
+}
+
+.contact__form-subject {
+  grid-area: subject-input;
+
+  @media (min-width: $media-tablet) {
+    border-left: none;
+    box-shadow: none;
+  }
+}
+
+.contact__form-message {
+  grid-area: message-input;
+
+  @media (min-width: $media-tablet) {
+    padding-bottom: 140px;
+    border-left: none;
+    box-shadow: none;
+  }
+}

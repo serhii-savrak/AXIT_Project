@@ -1,0 +1,43 @@
+.header {
+  background: $black;
+  min-width: $min-media-mobile;
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 18px;
+  padding-bottom: 25px;
+
+  @media (min-width: $media-tablet) {
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.header__company-title {
+  font-family: $font-sans;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $white;
+  font-size: 35px;
+  text-transform: uppercase;
+
+  & span {
+    color: $logo-accent-color;
+    font-weight: normal;
+  }
+}
+
+.header__contact-link {
+  color: $white;
+  font-size: 35px;
+  display: none;
+
+  @media (min-width: $media-tablet) {
+    display: block;
+  }
+}
